@@ -1,0 +1,42 @@
+package com.helloworldexample;
+
+import org.springframework.beans.BeansException;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
+
+public class Triangle1 implements ApplicationContextAware{
+ void draw()
+ {
+ System.out.println("triangle Drawn");
+ }
+ @Override
+	public void setApplicationContext(ApplicationContext context) throws BeansException {
+		
+		System.out.println(context);
+	}
+  
+  !!!!!!!!-------MAIN CLASS------!!!!!!!!!!!!!!!!!!!
+  package com.helloworldexample;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class DrawingApp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ApplicationContext factory=new ClassPathXmlApplicationContext("Spring.xml");
+	     Triangle1 obj= (Triangle1) factory.getBean("traingle1");
+	     obj.draw();
+	}
+
+}
+ !!!!!!!!-------XML CONFIGURATION------!!!!!!!!!!!!!!!!!!!
+ <?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+   <bean id = "triangle" class = "com.helloworldexample.Triangle1">
+   </bean>
