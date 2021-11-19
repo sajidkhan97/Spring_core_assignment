@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   <bean id = "question" class = "springs.ques2.Questions">
+   <property name="quesId" value="1"/>
+   <property name="question" value="What is your name?"/>
+  <property name="answer2">
+  <map>
+  <entry key="1" value="Humera"></entry>
+  <entry key="2" value="Sumera"></entry>
+  </map>
+   <!-- <set>
+  	<value>Humera</value>
+   <value>Sumera</value>
+   </set> -->
+   <!-- <list>
+   <value>Humera</value>
+   <value>Sumera</value>
+   </list> -->
+   
+   </property>
+   </bean>
+   
+ </beans>

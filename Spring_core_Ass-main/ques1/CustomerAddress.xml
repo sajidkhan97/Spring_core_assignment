@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+		<!-- using Constructors -->
+   <bean id = "customer" class = "springs.Customer">
+   <constructor-arg value="2"/>
+   <constructor-arg value="Sumera"/>
+   <constructor-arg value="7892023424"/>
+   <constructor-arg ref="address"/>
+   </bean>
+   			 <!--  Using Setters -->
+  <!--  <property name="customerId" value="1"/>
+   <property name="customerName" value="Humera"/>
+   <property name="customerContact" value="9108208347"/>
+   <property name="customerAddress" ref="address"/> -->
+   
+ 			 <!-- using Constructors -->
+	<bean id="address" class="springs.Address">
+		<constructor-arg value="SR Block "/>
+   		<constructor-arg value="Bangalore"/>
+   		<constructor-arg value="Karnataka"/>
+  		 <constructor-arg value="560045"/>
+  		  <constructor-arg value="India"/>
+  		  
+  		 <!--  Using Setters -->
+		<!-- <property name="street" value="SR Block"/>
+		<property name="city" value="Bangalore"/>
+		<property name="state" value="Karnataka"/>
+		<property name="zip" value="560045"/>
+		<property name="country" value="India"/> -->
+	</bean>
+</beans>
